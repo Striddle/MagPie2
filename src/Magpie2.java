@@ -39,8 +39,19 @@ public class Magpie2
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
+
 		{
 			response = "Tell me more about your family.";
+            {
+                if (statement.indexOf("Sean") >= 0)
+                    response = "Why so scrub?";
+            }
+                if (statement.indexOf("Theo") >= 0)
+                response = "Hello m8";
+            {
+                if (statement.indexOf("Abert") >=0)
+                response = "That Runner sucks, Slower than Usain";
+            }
 		}
 		else
 		{
