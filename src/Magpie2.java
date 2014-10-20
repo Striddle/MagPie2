@@ -31,6 +31,7 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
+
 		if (statement.indexOf("no") >= 0)
 		{
 			response = "Why so negative?";
@@ -42,21 +43,29 @@ public class Magpie2
 
 		{
 			response = "Tell me more about your family.";
-            {
-                if (statement.indexOf("Sean") >= 0)
-                    response = "Why so scrub?";
-            }
-                if (statement.indexOf("Theo") >= 0)
-                response = "Hello m8";
-            {
-                if (statement.indexOf("Abert") >=0)
-                response = "That Runner sucks, Slower than Usain";
-            }
 		}
-		else
+
+
+        else if (statement.indexOf("Sean") >= 0)
+        {
+                response = "Why so scrub?";
+        }
+
+        else if (statement.indexOf("Theo") >= 0)
+        {
+                response = "Hello m8";
+        }
+
+        else if (statement.indexOf("Abert") >=0)
+        {
+                response = "That Runner sucks, Slower than Usain";
+        }
+        else
 		{
 			response = getRandomResponse();
 		}
+
+
 		return response;
 	}
     private int findKeyword(String statement, String goal, int startPos)
